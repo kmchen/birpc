@@ -6,7 +6,7 @@ import (
 	"io"
 )
 
-func NewCodec(conn io.ReadWriteCloser) Codec {
+func NewJsonCodec(conn io.ReadWriteCloser) Codec {
 	wBuf := bufio.NewWriter(conn)
 	return &codec{
 		conn: conn,

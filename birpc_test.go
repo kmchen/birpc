@@ -40,7 +40,7 @@ func (ts *TestSuite) SetupSuite() {
 			if err != nil {
 				log.Fatal("Connection accept error : %v", err)
 			}
-			c := NewCodec(conn)
+			c := NewJsonCodec(conn)
 			s := NewProtocol(c)
 			// Prepare service and methods
 			s.Register(new(Arith))
